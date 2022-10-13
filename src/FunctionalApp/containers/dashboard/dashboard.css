@@ -1,0 +1,185 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #fafafa;
+    font-family: 'Roboto', sans-serif;
+}
+.loader {
+    position: absolute;
+    top: calc(50% - 4em);
+    left: calc(50% - 4em);
+    width: 6em;
+    height: 6em;
+    border: 1.1em solid rgba(0, 0, 0, 0.2);
+    border-left: 1.1em solid #000000;
+    border-radius: 50%;
+    animation: load8 1.1s infinite linear;
+    transition: opacity 0.3s;
+  }
+
+  @keyframes load8 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .dashboard {
+    width: 100%;
+  }
+
+  .dashboard .header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 8px 5px rgb(0 12 17 / 40%);
+    background-color: #525252;
+    align-items: center;
+}
+
+.header svg {
+    height: 32px;
+}
+  
+  .dashboard .header .profile-name {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+  }
+  .dashboard .to-do {
+    width: 50%;
+    align-items: center;
+    border-radius: 5px;
+    margin: 50px auto 0;
+    background: #fff;
+    box-shadow: 0 0 12px rgb(0 0 0 / 15%);
+    padding: 20px 20px;
+    position: relative;
+}
+.dashboard .to-do .subheader {
+    width: 100%;
+    text-align: right;
+    padding: 0;
+}
+
+.dashboard .to-do .subheader .create-new {
+    background-color: #525252;
+    border: none;
+    border-radius: 3px;
+    padding: 7px 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.dashboard .to-do .subheader .create-new:hover {
+    background-color: #1a1a1a;
+}
+.dashboard .to-do .listing {
+    width: 100%;
+    margin-top: 15px;
+}
+.dashboard .to-do .listing .to-do-listing-card {
+    border: 1px solid #dadada;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding:12px 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.dashboard .to-do .listing  .complete {
+  background-color: darkgrey;
+}
+.dashboard .to-do .listing .to-do-listing-card:hover {
+    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+}
+  .dashboard .to-do .listing .to-do-listing-card .actions button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: .6;
+  }
+  .dashboard .to-do .listing .to-do-listing-card .actions button:hover{
+    opacity: 1;
+  }
+  .dashboard .to-do .listing .to-do-listing-card .actions svg{
+    width: 16px;
+    height: 16px;
+  }
+  .content .title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #212121;
+    line-height: 22px;
+}
+.content .description {
+    font-size: 14px;
+    font-weight: 300;
+    color: #636363;
+}
+.create-to-do-modal {
+  position: fixed;
+  width: 480px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 15px;
+  z-index: 2;
+  border-radius: 6px;
+}
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+.modal-header svg {
+  width: 16px;
+  height: 16px;
+}
+.modal-header button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(0 0 0 / 50%);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-content input, .modal-content textarea{
+  width: 100%;
+  padding: 10px 10px;
+  border: 1px solid #dadada;
+  margin-bottom: 12px;
+  outline: none;
+  resize: none;
+  font-family: 'Roboto', sans-serif;
+}
+.modal-content button {
+  background-color: #525252;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #fff;
+  margin: 5px 0;
+}
